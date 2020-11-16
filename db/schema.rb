@@ -10,11 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 2020_11_16_223234) do
+=======
+ActiveRecord::Schema.define(version: 2020_11_16_222733) do
+>>>>>>> d8cdb62f1095d5407be850b389cf05f55fd1d72a
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+<<<<<<< HEAD
   create_table "ratings", force: :cascade do |t|
     t.integer "stars"
     t.string "comment"
@@ -22,6 +27,18 @@ ActiveRecord::Schema.define(version: 2020_11_16_223234) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_ratings_on_user_id"
+=======
+  create_table "bookings", force: :cascade do |t|
+    t.bigint "van_id", null: false
+    t.date "start_date"
+    t.date "end_date"
+    t.bigint "user_id", null: false
+    t.boolean "approved"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_bookings_on_user_id"
+    t.index ["van_id"], name: "index_bookings_on_van_id"
+>>>>>>> d8cdb62f1095d5407be850b389cf05f55fd1d72a
   end
 
   create_table "users", force: :cascade do |t|
@@ -51,6 +68,11 @@ ActiveRecord::Schema.define(version: 2020_11_16_223234) do
     t.index ["user_id"], name: "index_vans_on_user_id"
   end
 
+<<<<<<< HEAD
   add_foreign_key "ratings", "users"
+=======
+  add_foreign_key "bookings", "users"
+  add_foreign_key "bookings", "vans"
+>>>>>>> d8cdb62f1095d5407be850b389cf05f55fd1d72a
   add_foreign_key "vans", "users"
 end
