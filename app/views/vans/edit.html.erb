@@ -1,3 +1,5 @@
+<h1>Update a van</h1>
+
 <%= simple_form_for(@van) do |f| %>
   <%= f.input :title %>
   <%= f.input :description %>
@@ -6,4 +8,4 @@
   <%= f.submit %>
 <% end %>
 
-<p><%= link_to "Go back", vans_path, class: "btn btn-primary" %></p>
+<p><%= link_to "Go back", van_path(@van), class: "btn btn-primary" %></p>
