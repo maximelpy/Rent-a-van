@@ -1,12 +1,10 @@
-<div>
+<ol>
   <% @bookings.each do |booking| %>
     <div>
-      <a><%= link_to booking.title, booking_path(booking) %></a>
-      <p> <%= booking.start_date %> </p>
-      <p> <%= booking.end_date %> </p>
-      <p> <%= booking.approved %> </p>
+      <li>From <%= booking.end_date %> --- To <%= booking.start_date %><%= booking.approved %>
+      <p><%= booking.van.title %></p></li>
     </div>
   <% end %>
-</div>
+</ol>
 
 
