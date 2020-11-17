@@ -1,0 +1,15 @@
+
+
+<div>
+  <% @vans.each do |van| %>
+    <div>
+      <a><%= link_to van.title, van_path(van) %></a>
+      <p> <%= van.description %> </p>
+      <p> <%= van.address %> </p>
+      <p> <%= van.price %> </p>
+    </div>
+  <% end %>
+</div>
+
+
+<%= link_to "Create a new van", new_van_path, class: "btn btn-outline-success" %>
