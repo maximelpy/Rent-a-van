@@ -1,0 +1,10 @@
+<ol>
+  <% @bookings.each do |booking| %>
+    <div>
+      <li>From <%= booking.end_date %> --- To <%= booking.start_date %><%= booking.approved %>
+      <p><%= booking.van.title %></p></li>
+    </div>
+  <% end %>
+</ol>
+
+
