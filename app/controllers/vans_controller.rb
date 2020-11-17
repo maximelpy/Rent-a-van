@@ -19,6 +19,7 @@ class VansController < ApplicationController
 
   def create
     @van = Van.new(van_params)
+    @van.user = current_user
     if @van.save
       redirect_to van_path(@van)
     else
@@ -29,6 +30,6 @@ class VansController < ApplicationController
   private
 
   def van_params
-    params.require(:van).permit(:title, :description, :price, :address)
+    params.require(:van).permit(:title, :description, :price, :address, :booked)
   end
 end
