@@ -1,10 +1,5 @@
 class VansController < ApplicationController
 
-
-  def show
-    @van = Van.find(params[:id])
-  end
-
   def index
     @vans = Van.all
   end
