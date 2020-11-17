@@ -4,6 +4,6 @@
 <h1>address : <%= @van.address %></h1>
 
 <p><%= link_to "Edit", edit_van_path, class: "btn btn-outline-success" %></p>
-<p><%= link_to "Delete", new_van_path, method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-outline-success" %></p>
-<p><%= link_to "back to see all vans", van_path(params[:id]) %></p>
+<p><%= link_to "Delete", van_path(@van), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-outline-success" %></p>
+<p><%= link_to "Back to see all vans", van_path(@van) %></p>
 
