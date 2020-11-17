@@ -45,6 +45,6 @@ before_action :set_van, only: [ :show, :edit, :update, :destroy ]
   end
 
   def van_params
-    params.require(:van).permit(:title, :description, :password, :price, :address, :booked)
+    params.require(:van).permit(:title, :description, :price, :address, :booked)
   end
 end
