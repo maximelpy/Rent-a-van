@@ -2,6 +2,7 @@ class VansController < ApplicationController
 
 
   def show
+
     @van = Van.find(params[:id])
   end
 
@@ -28,6 +29,6 @@ class VansController < ApplicationController
   private
 
   def van_params
-    params.require(:van).permit(:title, :description, :password, :price, :address, :booked)
+    params.require(:van).permit(:title, :description, :price, :address)
   end
 end
