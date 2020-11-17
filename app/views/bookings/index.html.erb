@@ -1,0 +1,12 @@
+<div>
+  <% @bookings.each do |booking| %>
+    <div>
+      <a><%= link_to booking.title, booking_path(booking) %></a>
+      <p> <%= booking.start_date %> </p>
+      <p> <%= booking.end_date %> </p>
+      <p> <%= booking.approved %> </p>
+    </div>
+  <% end %>
+</div>
+
+
