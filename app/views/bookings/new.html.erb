@@ -1,0 +1,9 @@
+
+<h3>Create a new booking</h3>
+<%= simple_form_for [@van, @booking] do |f| %>
+  <%= f.input :start_date %>
+  <%= f.input :end_date %>
+  <%= f.button :submit, class: "btn btn-outline-success" %>
+<% end %>
+
+<p><%= link_to "Go back", vans_path, class: "btn btn-primary" %></p>
