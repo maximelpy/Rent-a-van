@@ -1,5 +1,4 @@
 
-
 <div>
   <% @vans.each do |van| %>
     <div>
@@ -11,5 +10,5 @@
   <% end %>
 </div>
 
+<p><%= link_to "Create a new van", new_van_path, class: "btn btn-outline-success" %></p>
 
-<%= link_to "Create a new van", new_van_path, class: "btn btn-outline-success" %>
