@@ -1,4 +1,5 @@
 class VansController < ApplicationController
+
 before_action :set_van, only: [ :show, :edit, :update, :destroy ]
 
   def index
