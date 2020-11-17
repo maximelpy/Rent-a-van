@@ -35,6 +35,7 @@ before_action :set_van, only: [ :show, :edit, :update, :destroy ]
   end
 
   def destroy
+    @van = Van.find(params[:id])
     @van.destroy
     redirect_to vans_path
   end
