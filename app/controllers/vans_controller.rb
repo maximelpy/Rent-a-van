@@ -1,0 +1,2 @@
+class VansController < ApplicationController
+end
