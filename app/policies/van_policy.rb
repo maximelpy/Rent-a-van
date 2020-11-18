@@ -1,4 +1,4 @@
-class VansPolicy < ApplicationPolicy
+class VanPolicy < ApplicationPolicy
   class Scope < Scope
     def resolve
       scope.all
@@ -24,9 +24,6 @@ class VansPolicy < ApplicationPolicy
   private
 
   def user_is_owner?
-    # user: the current_user from Devise (current_user)
-    # record: the Restaurant instance passed in from the controller (@restaurant)
-
     return user == record.user
   end
 end

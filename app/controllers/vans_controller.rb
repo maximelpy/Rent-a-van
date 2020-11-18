@@ -3,6 +3,7 @@ class VansController < ApplicationController
   before_action :set_van, only: [ :show, :edit, :update, :destroy ]
 
   def index
+    @vans = Van.all
     @vans = policy_scope(Van).order(:created_at)
   end
 
@@ -12,6 +13,7 @@ class VansController < ApplicationController
 
   def new
     @van = Van.new
+    authorize(@van)
   end
 
   def create
