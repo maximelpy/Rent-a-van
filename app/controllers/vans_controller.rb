@@ -1,4 +1,5 @@
 class VansController < ApplicationController
+
   skip_before_action :authenticate_user!, only: [:index, :show]
   before_action :set_van, only: [ :show, :edit, :update, :destroy ]
 
@@ -50,7 +51,11 @@ class VansController < ApplicationController
   end
 
   def destroy
+<<<<<<< HEAD
+    @van = Van.find(params[:id])
+=======
     authorize(@van)
+>>>>>>> 5c62339a0d31b74f50da418e6d7a4d72b904e660
     @van.destroy
     redirect_to vans_path
   end

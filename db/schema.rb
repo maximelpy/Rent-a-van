@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 2020_11_18_160533) do
     t.date "start_date"
     t.date "end_date"
     t.bigint "user_id", null: false
-    t.boolean "approved"
+    t.boolean "approved", default: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_bookings_on_user_id"
@@ -47,6 +47,7 @@ ActiveRecord::Schema.define(version: 2020_11_18_160533) do
     t.integer "age"
     t.string "full_name"
     t.boolean "owner"
+    t.integer "driving_licence_year"
     t.integer "sign_in_count"
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
