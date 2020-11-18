@@ -1,17 +1,22 @@
-<h1>title : <%= @van.title %></h1>
-<h1>price : <%= @van.price %></h1>
-<h1>description : <%= @van.description %></h1>
-<h1>address : <%= @van.address %></h1>
+<div class="container-show">
+    <div class="col-sm-6">
+
+<h1><strong>title:</strong>  <%= @van.title %></h1>
+<h1><strong>price : $</strong> <%= @van.price %></h1>
+<h1><strong>description:</strong> <%= @van.description %></h1>
+<h1><strong>address:</strong> <%= @van.address %></h1>
 
 <% if policy(@van).edit? %>
-  <p><%= link_to "Edit", edit_van_path, class: "btn btn-outline-success" %></p>
+  <%= link_to "Edit", edit_van_path, class: "btn btn-outline-success" %>
 <% end %>
 
 <% if policy(@van).destroy? %>
-<p><%= link_to "Delete", van_path(@van), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-outline-success" %></p>
+<%= link_to "Delete", van_path(@van), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-outline-success" %>
 <% end %>
 
-<p><%= link_to "Book this van", new_van_booking_path(@van), data: { confirm: "Confirm the booking" }, class: "btn btn-outline-success" %></p>
+<%= link_to "Book this van", new_van_booking_path(@van), data: { confirm: "Confirm the booking" }, class: "btn btn-outline-success" %>
 
-<p><%= link_to "Back to see all vans", vans_path%></p>
+<%= link_to "Back to see all vans", vans_path, class: "btn btn-outline-primary"%>
 
+</div>
+</div>
