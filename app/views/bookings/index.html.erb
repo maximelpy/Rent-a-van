@@ -3,7 +3,7 @@
     <div>
       <% current_user%>
       <a><%= link_to booking.user.email, booking_path(booking) %></a>
-      <li>From <%= booking.end_date %> --- To <%= booking.start_date %><%= booking.approved %>
+      <li>From <%= booking.start_date %> --- To <%= booking.end_date %><%= booking.approved %>
       <p><%= booking.van.title %></p></li>
     </div>
   <% end %>

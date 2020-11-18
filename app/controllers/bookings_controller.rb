@@ -2,15 +2,17 @@ class BookingsController < ApplicationController
 before_action :set_booking, only: [:show, :update, :destroy]
 
   def index
-    @bookings = Booking.all
+    @bookings = policy_scope(Booking).order(:created_at)
   end
 
   def show
+    authorize(@booking)
   end
 
   def new
     @van = Van.find(params[:van_id])
     @booking = Booking.new
+    authorize(@booking)
   end
 
   def create
@@ -18,6 +20,7 @@ before_action :set_booking, only: [:show, :update, :destroy]
     @booking = Booking.new(booking_params)
     @booking.van = @van
     @booking.user = current_user
+    authorize(@booking)
     if @booking.save
       redirect_to van_path(@van)
     else
@@ -26,12 +29,14 @@ before_action :set_booking, only: [:show, :update, :destroy]
   end
 
   def update
+    authorize(@booking)
     @booking.approved = true
     @booking.save
     redirect_to bookings_path
   end
 
   def destroy
+    authorize(@booking)
     @booking.destroy
     redirect_to bookings_path
   end
