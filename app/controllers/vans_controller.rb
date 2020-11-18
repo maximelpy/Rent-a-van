@@ -1,6 +1,5 @@
 class VansController < ApplicationController
-
-before_action :set_van, only: [ :show, :edit, :update, :destroy ]
+before_action :set_van, only: [:show, :edit, :update, :destroy]
 
   def index
     @vans = Van.all

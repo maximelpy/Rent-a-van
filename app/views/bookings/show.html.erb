@@ -1,12 +1,13 @@
 <% current_user %>
-<h1>Fullname : <%= @booking.user.first_name%> <%= @booking.user.last_name %></h1>
-<h2>price : <%= @van.price %></h2>
+<h1>Fisrtname : <%= @booking.user.first_name%></h1>
+<h2>price : <%= @booking.van.price %></h2>
+<h2>Van : <%= @booking.van.title %></h2>
 <h2>from : <%= @booking.start_date %></h2>
 <h2>to : <%= @booking.end_date %></h2>
 
-<p><%= link_to "Reject", bookings_path(@booking), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-outline-success" %></p>
+<p><%= link_to "Reject", booking_path(@booking), method: :delete, data: { confirm: "Are you sure for Reject?" }, class: "btn btn-outline-success" %></p>
+<p><%= link_to "confirm", booking_path(@booking), method: :patch, data: { confirm: "Are you sure for Confirm ?" }, class: "btn btn-outline-success" %></p>
 
-<p><%= link_to "confirm", new_van_booking_path(@van), data: { confirm: "Confirm the booking" }, class: "btn btn-outline-success" %></p>
 
 <p><%= link_to "Back to see all vans", vans_path%></p>
 
