@@ -4,6 +4,10 @@ class BookingsController < ApplicationController
     @bookings = Booking.all
   end
 
+  def show
+    @booking = Booking.find(params[:id])
+  end
+
   def new
     @van = Van.find(params[:van_id])
     @booking = Booking.new
@@ -20,7 +24,6 @@ class BookingsController < ApplicationController
       render :new
     end
   end
-
 
   def destroy
     @booking = Booking.find(params[:booking_id])

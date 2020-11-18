@@ -2,7 +2,7 @@
   <% @bookings.each do |booking| %>
     <div>
       <%= current_user%>
-      <a><%= link_to booking.user.emial, booking_path(booking) %></a>
+      <a><%= link_to booking.user.first_name, booking_path(booking) %></a>
       <li>From <%= booking.end_date %> --- To <%= booking.start_date %><%= booking.approved %>
       <p><%= booking.van.title %></p></li>
     </div>
