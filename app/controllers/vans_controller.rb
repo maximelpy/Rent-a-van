@@ -3,7 +3,14 @@ class VansController < ApplicationController
 before_action :set_van, only: [ :show, :edit, :update, :destroy ]
 
   def index
-    @vans = Van.all
+    @vans = Van.geocoded
+
+    @markers = @vans.geocoded.map do |van|
+      {
+        lat: van.latitude,
+        lng: van.longitude
+      }
+    end
   end
 
   def show
