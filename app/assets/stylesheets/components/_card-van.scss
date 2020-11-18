@@ -38,3 +38,17 @@
   top: -20px;
   width: 40px;
 }
+
+.container-show{
+  display:flex;
+
+  border: 1px solid black;
+}
+
+.container-show h1{
+  font-size: 25px;
+}
+
+.buttons {
+  display: flex
+}
