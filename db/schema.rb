@@ -45,7 +45,8 @@ ActiveRecord::Schema.define(version: 2020_11_18_160533) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "age"
-    t.string "full_name"
+    t.string "first_name"
+    t.string "last_name"
     t.boolean "owner"
     t.integer "driving_licence_year"
     t.integer "sign_in_count"
