@@ -41,8 +41,11 @@
 
 .container-show{
   display:flex;
-
+  background-color: rgba(222, 222, 222, 0.7);
   border: 1px solid black;
+  border-radius: rounded;
+  padding: 20px;
+  margin: 20px;
 }
 
 .container-show h1{

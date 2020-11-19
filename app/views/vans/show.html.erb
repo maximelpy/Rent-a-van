@@ -24,3 +24,14 @@
 
 </div>
 </div>
+
+
+<div class="card-product">
+    <% if @van.photo.attached? %>
+      <%= cl_image_tag @van.photo.key, height: 300, width: 400, crop: :fill %>
+    <% end %>
+  <div class="card-product-infos">
+    <h2><%= @van.title %></h2>
+    <p><%= @van.description %></p>
+  </div>
+</div>
