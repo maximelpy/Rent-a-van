@@ -30,15 +30,8 @@ before_action :set_booking, only: [:show, :update, :destroy]
 
   def update
     authorize(@booking)
-    @booking.approved = true
-    @booking.save
-    redirect_to bookings_path
-  end
-
-  def destroy
-    authorize(@booking)
-    @booking.destroy
-    redirect_to bookings_path
+    @booking.update(booking_params)
+    redirect_to booking_path
   end
 
   private
@@ -46,6 +39,7 @@ before_action :set_booking, only: [:show, :update, :destroy]
   def booking_params
     params.require(:booking).permit(:start_date, :end_date, :user_id, :approved)
   end
+
 
   def set_booking
     @booking = Booking.find(params[:id])
