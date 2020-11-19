@@ -7,4 +7,6 @@ Rails.application.routes.draw do
     resources :ratings, only: [:index, :show, :update, :destroy]
   end
   resources :bookings, only: [:index, :show, :update, :destroy]
+  resource :profiles, only: [:edit, :update]
+  resources :profiles, only: :show
 end
