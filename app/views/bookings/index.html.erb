@@ -1,12 +1,21 @@
 <ol>
   <% @bookings.each do |booking| %>
     <div>
-      <% current_user%>
-      <a><%= link_to booking.user.email, booking_path(booking) %></a>
-      <li>From <%= booking.start_date %> --- To <%= booking.end_date %><%= booking.approved %>
-      <p><%= booking.van.title %></p></li>
+      <li>
+        <% unless policy(booking).user_is_creator? %>
+          <p><%= link_to booking.user.email, booking_path(booking) %></p>
+          From <%= booking.start_date %> - To <%= booking.end_date %>
+        <% else %>
+          <p><%= booking.van.title %>
+            <% if booking.approved %>
+              <%= "Approved" %>
+            <% else %>
+              <%= "Not approved" %>
+            <% end %></p>
+          From <%= booking.start_date %> - To <%= booking.end_date %>
+          <a><%= booking.van.user.full_name %></a>
+        <% end %>
+      </li>
     </div>
   <% end %>
 </ol>
-
-

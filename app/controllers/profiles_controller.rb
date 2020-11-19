@@ -1,7 +1,7 @@
 class ProfilesController < ApplicationController
 skip_after_action :verify_authorized
-  def edit
 
+  def edit
   end
 
   def update
@@ -13,6 +13,7 @@ skip_after_action :verify_authorized
   end
 
   private
+
   def user_params
     params.require(:user).permit(:full_name, :age, :driving_licence_year)
   end
