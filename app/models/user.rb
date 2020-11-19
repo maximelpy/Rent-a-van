@@ -1,5 +1,4 @@
 class User < ApplicationRecord
-  has_many :ratings
   has_many :vans
   has_many :bookings
   validates :email, format: { with: /\A.*@.*\.com\z/ }

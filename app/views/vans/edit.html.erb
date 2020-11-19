@@ -1,6 +1,7 @@
 <h1>Update a van</h1>
 
 <%= simple_form_for(@van) do |f| %>
+  <%= f.input :photo, as: :file %>
   <%= f.input :title %>
   <%= f.input :description %>
   <%= f.input :price %>
