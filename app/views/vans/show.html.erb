@@ -5,7 +5,9 @@
 <h1><strong>price : $</strong> <%= @van.price %></h1>
 <h1><strong>description:</strong> <%= @van.description %></h1>
 <h1><strong>address:</strong> <%= @van.address %></h1>
-
+<% if @van.photo.attached? %>
+<%= cl_image_tag @van.photo.key, height: 300, width: 400, crop: :fill %>
+<% end %>
 <% if policy(@van).edit? %>
   <%= link_to "Edit", edit_van_path, class: "btn btn-outline-success" %>
 <% end %>
