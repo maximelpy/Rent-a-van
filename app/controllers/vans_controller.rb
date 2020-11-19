@@ -10,7 +10,8 @@ class VansController < ApplicationController
     @markers = @vans.geocoded.map do |van|
       {
         lat: van.latitude,
-        lng: van.longitude
+        lng: van.longitude,
+        infoWindow: render_to_string(partial: "info_window", locals: { van: van })
       }
     end
   end
