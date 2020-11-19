@@ -13,7 +13,9 @@
           <p><%= van.description %></p>
           </div>
            <h2 class="card-trip-pricing">$<%= van.price %></h2>
-            <%= image_tag "profile.png", class: "card-trip-user avatar-bordered" %>
+
+            <%= cl_image_tag current_user.photo.key, height: 40, width: 40, crop: :fill, class: "card-trip-user avatar-bordered" %>
+
           </div>
         </div>
       <% end %>

@@ -2,6 +2,7 @@ class User < ApplicationRecord
   has_many :ratings
   has_many :vans
   has_many :bookings
+  has_one_attached :photo
   validates :email, format: { with: /\A.*@.*\.com\z/ }
   # validates :age, numericality: { only_integer: true, greater_than_or_equal_to: 18 }
   # validates :driving_licence_year, numericality: { only_integer: true }
