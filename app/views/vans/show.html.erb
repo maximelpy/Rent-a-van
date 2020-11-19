@@ -1,8 +1,13 @@
-<h1>title : <%= @van.title %></h1>
-<h1>price : <%= @van.price %></h1>
-<h1>description : <%= @van.description %></h1>
-<h1>address : <%= @van.address %></h1>
+<div class="container-show">
+    <div class="col-sm-6">
 
+<h1><strong>title:</strong>  <%= @van.title %></h1>
+<h1><strong>price : $</strong> <%= @van.price %></h1>
+<h1><strong>description:</strong> <%= @van.description %></h1>
+<h1><strong>address:</strong> <%= @van.address %></h1>
+<% if @van.photo.attached? %>
+<%= cl_image_tag @van.photo.key, height: 300, width: 400, crop: :fill %>
+<% end %>
 <% if policy(@van).edit? %>
   <p><%= link_to "Edit", edit_van_path, class: "btn btn-outline-success" %></p>
 <% end %>
@@ -15,3 +20,5 @@
 
 <p><%= link_to "Back to see all vans", vans_path%></p>
 
+</div>
+</div>
