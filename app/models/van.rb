@@ -12,15 +12,15 @@ class Van < ApplicationRecord
   after_validation :geocode, if: :will_save_change_to_address?
 
   def average_stars
-    array_ratings = self.ratings
-    unless array_ratings.exists?
+    array_stars = self.ratings
+    unless array_stars.length > 0
       return " No stars for the moment"
     else
       sum = 0
-      array_ratings.each do |element|
-        sum += element
+      array_stars.each do |element|
+        sum += element.stars
       end
-      return sum / array_ratings.length
+      return sum / array_stars.length
     end
   end
 end

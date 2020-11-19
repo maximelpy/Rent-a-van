@@ -1,9 +1,0 @@
-<h1>Edit your rating</h1>
-
-<%= simple_form_for(@van) do |f| %>
-  <%= f.input :stars %>
-  <%= f.input :comment %>
-  <%= f.submit %>
-<% end %>
-
-<p><%= link_to "Go back", rating_path(@rating), class: "btn btn-primary" %></p>

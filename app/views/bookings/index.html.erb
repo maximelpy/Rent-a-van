@@ -6,9 +6,13 @@
           <p><%= link_to booking.user.email, booking_path(booking) %></p>
           From <%= booking.start_date %> - To <%= booking.end_date %>
         <% else %>
-          <p><%= booking.van.title %> - status: <%= booking.approved %></p>
+          <p><%= link_to booking.van.title, van_path(booking.van) %> - status: <%= booking.approved %></p>
           From <%= booking.start_date %> - To <%= booking.end_date %>
           <a><%= booking.van.user.full_name %></a>
+          <% if booking.approved == "approved" %>
+            <h3>Please, leave a note or any comment for <%= booking.van.user.full_name%>'s van</h3>
+            <%= link_to "Rating", new_van_rating_path(booking.van), class: "btn btn-outline-success" %>
+          <% end %>
         <% end %>
       </li>
     </div>
