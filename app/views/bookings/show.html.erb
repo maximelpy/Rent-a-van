@@ -9,8 +9,8 @@
   <h2>from : <%= @booking.start_date %></h2>
   <h2>to : <%= @booking.end_date %></h2>
 
-  <p><%= link_to "Reject", booking_path(@booking, {booking: {approved: "rejected"}}), method: :patch, data: { confirm: "Are you sure for Reject?" }, class: "btn btn-outline-success" %></p>
-  <p><%= link_to "confirm", booking_path(@booking, {booking: {approved: "approved"}}), method: :patch, data: { confirm: "Are you sure for Confirm ?" }, class: "btn btn-outline-success" %></p>
+  <p><%= link_to "Reject", booking_path(@booking, {booking: {approved: "rejected"}}), method: :patch, data: { confirm: "Are you sure to reject the offer?" }, class: "btn btn-outline-success" %></p>
+  <p><%= link_to "Accept", booking_path(@booking, {booking: {approved: "approved"}}), method: :patch, data: { confirm: "Are you sure to accept the offer ?" }, class: "btn btn-outline-success" %></p>
 
 
   <p><%= link_to "Back to see all vans", vans_path, class: "btn btn-outline-primary"%></p>

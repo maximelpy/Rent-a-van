@@ -24,3 +24,10 @@
 
 </div>
 </div>
+
+<p>See all the previous ratings for this van:</p>
+
+<% @van.ratings.each do |rating| %>
+  <h2><%= rating.stars %></h2>
+  <h2><%= rating.comment %></h2>
+<% end %>
