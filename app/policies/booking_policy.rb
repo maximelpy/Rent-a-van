@@ -5,25 +5,27 @@ class BookingPolicy < ApplicationPolicy
     end
   end
 
-  def show?
-    return user_is_owner?
+  def index?
+    return false
   end
 
-   def create?
+  def show?
+    return user
+  end
+
+  def create?
     return true
   end
 
   def update?
-    return user_is_owner?
+    return user_is_creator?
   end
 
   def destroy?
-    return user_is_owner?
+    return user_is_creator?
   end
 
-  private
-
-  def user_is_owner?
+  def user_is_creator?
     return user == record.user
   end
 end

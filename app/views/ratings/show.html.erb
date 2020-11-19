@@ -1,0 +1,20 @@
+<div class="container-show">
+    <div class="col-sm-6">
+
+<h1><strong>stars:</strong>  <%= @rating.stars %></h1>
+<h1><strong>comment : $</strong> <%= @rating.comment %></h1>
+
+
+<%= link_to "Edit", edit_rating_path, class: "btn btn-outline-success" %>
+
+
+<%= link_to "Delete", rating_path(@van), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-outline-success" %>
+
+
+<%= link_to "Create a new rating", new_rating_path(@rating), data: { confirm: "Confirm the rating" }, class: "btn btn-outline-success" %>
+
+
+<%= link_to "Back to see all ratings", ratings_path, class: "btn btn-outline-primary"%>
+
+</div>
+</div>
