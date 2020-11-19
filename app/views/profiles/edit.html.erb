@@ -1,0 +1,8 @@
+<h1>Update a profile</h1>
+<%= simple_form_for(current_user, url: profiles_path) do |f| %>
+  <%= f.input :full_name %>
+  <%= f.input :age %>
+  <%= f.input :driving_licence_year %>
+  <%= f.submit %>
+<% end %>
+
