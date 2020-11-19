@@ -1,11 +1,17 @@
 <div class="container">
-<h1 class="">Update a profile</h1>
+    <div class="row justify-content-md-center">
+    <div class="col-sm-6" >
+<h1>Update your profile</h1>
 
 <%= simple_form_for(current_user, url: profiles_path) do |f| %>
+  <%= f.input :photo, as: :file %>
   <%= f.input :full_name %>
   <%= f.input :age %>
   <%= f.input :driving_licence_year %>
-  <%= f.submit class: "btn btn-primary" %>
+  <%= f.submit class: "btn btn-primary " %>
 <% end %>
+
+</div>
+</div>
 </div>
 
