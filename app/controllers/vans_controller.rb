@@ -1,8 +1,9 @@
 class VansController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
-  before_action :set_van, only: [ :show, :edit, :update, :destroy ]
+  before_action :set_van, only: [:show, :edit, :update, :destroy]
 
   def index
+
     @vans = policy_scope(Van).order(:created_at)
     @vans = Van.geocoded
 
@@ -60,6 +61,6 @@ class VansController < ApplicationController
   end
 
   def van_params
-    params.require(:van).permit(:title, :description, :price, :address, :booked)
+    params.require(:van).permit(:title, :description, :price, :address, :booked, :photo)
   end
 end
