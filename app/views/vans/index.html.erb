@@ -14,7 +14,9 @@
           <h5>Average stars: <%= van.average_stars %></h5>
           </div>
            <h2 class="card-trip-pricing">$<%= van.price %></h2>
-            <%= image_tag "profile.png", class: "card-trip-user avatar-bordered" %>
+            <% if current_user.photo.attached? %>
+            <%= cl_image_tag current_user.photo.key, height: 40, width: 40, crop: :fill, class: "card-trip-user avatar-bordered" %>
+            <% end %>
           </div>
         </div>
       <% end %>
