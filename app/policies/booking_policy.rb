@@ -18,11 +18,11 @@ class BookingPolicy < ApplicationPolicy
   end
 
   def update?
-    return user_is_creator?
+    return true
   end
 
   def destroy?
-    return user_is_creator?
+    return true
   end
 
   def user_is_creator?

@@ -6,12 +6,7 @@
           <p><%= link_to booking.user.email, booking_path(booking) %></p>
           From <%= booking.start_date %> - To <%= booking.end_date %>
         <% else %>
-          <p><%= booking.van.title %>
-            <% if booking.approved %>
-              <%= "Approved" %>
-            <% else %>
-              <%= "Not approved" %>
-            <% end %></p>
+          <p><%= booking.van.title %> - status: <%= booking.approved %></p>
           From <%= booking.start_date %> - To <%= booking.end_date %>
           <a><%= booking.van.user.full_name %></a>
         <% end %>
