@@ -3,3 +3,4 @@ class Booking < ApplicationRecord
   belongs_to :user
   validates :approved, inclusion: { in: ["pending", "approved", "rejected"] }
 end
+
