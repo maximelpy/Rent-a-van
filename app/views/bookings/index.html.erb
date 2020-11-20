@@ -4,10 +4,11 @@
       <li>
         <% unless policy(booking).user_is_creator? %>
           <p><%= link_to booking.user.email, booking_path(booking) %></p>
+          <p>Total price :<%= (booking.end_date - booking.start_date).to_i * booking.van.price %>$</p>
           From <%= booking.start_date %> - To <%= booking.end_date %>
         <% else %>
           <p><%= link_to booking.van.title, van_path(booking.van) %> - status: <%= booking.approved %></p>
-          From <%= booking.start_date %> - To <%= booking.end_date %>
+          <p>Total price :<%= ((booking.end_date - booking.start_date).to_i) * booking.van.price %>$</p>
           <a><%= booking.van.user.full_name %></a>
           <% if booking.approved == "approved" %>
             <h3>Please, leave a note or any comment for <%= booking.van.user.full_name%>'s van</h3>
