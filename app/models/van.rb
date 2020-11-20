@@ -20,7 +20,7 @@ class Van < ApplicationRecord
       array_stars.each do |element|
         sum += element.stars
       end
-      return sum / array_stars.length
+      return (sum.to_f / array_stars.length.to_f).round(2)
     end
   end
 end
