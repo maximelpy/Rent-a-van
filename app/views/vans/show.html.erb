@@ -8,12 +8,10 @@
       <h2><%= @van.title %></h2><h2>$<%= @van.price %>/day</h2>
       <p><strong>description:</strong> <%= @van.description %></p>
       <p><strong>address:</strong> <%= @van.address %></p>
-      <p>See all the previous ratings for this van:</p>
-
-      <% @van.ratings.each do |rating| %>
-        <h2><%= rating.stars %></h2>
-        <h2><%= rating.comment %></h2>
-      <% end %>
+      <h5><%= @van.average_stars %> <% @van.average_stars.to_f.round.times do %>
+            <i class="fas fa-star"></i>
+          <% end %>
+      </h5>
       <% if policy(@van).edit? %>
         <%= link_to "Edit", edit_van_path, class: "btn btn-outline-success" %>
       <% end %>
