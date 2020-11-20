@@ -10,8 +10,8 @@
           <div>
           <h2><%= link_to van.title, van_path(van) %></h2>
           <p><%= van.description %></p>
-          <h5>Average stars: <%= van.average_stars.to_i.times do %>
-            <span class="glyphicon glyphicon-star"></span>
+          <h5>Average stars: <% van.average_stars.to_i.times do %>
+            <i class="fas fa-star"></i>
           <% end %>
           </h5>
           </div>
