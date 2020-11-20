@@ -2,12 +2,12 @@
   overflow: hidden;
   background: rgba(0,0,0,0.8);
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  margin: 5px;
+  margin: 15px;
   height: auto;
 }
 
 .card-trip > img {
-  height: 100px;
+  height: 150px;
   width: 100%;
   object-fit: cover;
 }
@@ -62,6 +62,9 @@
   border-radius: rounded;
   padding: 20px;
   margin: 20px;
+  height: 450px;
+  align-items: center;
+  justify-content: center;
 }
 
 .container-show h1{
@@ -76,6 +79,34 @@
   overflow: scroll;
   height: 600px;
 }
+
+.col-sm-6-show {
+  height: 400px;
+}
+
+div.boolean, .simple_form input[type='submit'] {
+  background-color: #f05454;
+  border: 1px solid #f05454;
+  color: white;
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-weight: 200;
+  padding: 6px 12px;
+  border-radius: 2px;
+}
+
+
+div.boolean, .simple_form input[type='submit']:hover {
+  background-color: transparent;
+  color: #f05454;
+  text-decoration: none;
+  border: 1px solid #f05454;
+}
+
+.fas {
+  color: #f05454;
+}
+
+
 
 
 

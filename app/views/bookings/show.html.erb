@@ -1,10 +1,9 @@
-
 <div class="container-show">
     <div class="col-sm-6">
 
   <% current_user %>
-  <h1>Firstname : <%= @booking.user.full_name %></h1>
-  <h2>price : <%= @booking.van.price %></h2>
+  <h1>Name : <%= @booking.user.full_name %></h1>
+  <h2>price : <%= @booking.van.price %> $/per day</h2>
   <h2>Van : <%= @booking.van.title %></h2>
   <h2>from : <%= @booking.start_date %></h2>
   <h2>to : <%= @booking.end_date %></h2>

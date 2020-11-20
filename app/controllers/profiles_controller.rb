@@ -17,5 +17,4 @@ skip_after_action :verify_authorized
   def user_params
     params.require(:user).permit(:full_name, :age, :driving_licence_year, :photo)
   end
-
 end
