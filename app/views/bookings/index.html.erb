@@ -1,20 +1,36 @@
-<ol>
-  <% @bookings.each do |booking| %>
-    <div>
-      <li>
-        <% unless policy(booking).user_is_creator? %>
-          <p><%= link_to booking.user.email, booking_path(booking) %></p>
-          From <%= booking.start_date %> - To <%= booking.end_date %>
-        <% else %>
-          <p><%= link_to booking.van.title, van_path(booking.van) %> - status: <%= booking.approved %></p>
-          From <%= booking.start_date %> - To <%= booking.end_date %>
-          <a><%= booking.van.user.full_name %></a>
-          <% if booking.approved == "approved" %>
-            <h3>Please, leave a note or any comment for <%= booking.van.user.full_name%>'s van</h3>
-            <%= link_to "Rating", new_van_rating_path(booking.van), class: "btn btn-outline-success" %>
-          <% end %>
-        <% end %>
-      </li>
-    </div>
+
+<div class="container">
+  <div class="text-dark font-weight-bold text-center"><srong>All Your Bookings</srong>
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">car brand</th>
+      <th scope="col">start</th>
+      <th scope="col">end</th>
+      <th scope="col">By</th>
+      <th scope="col">status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+        <% @bookings.each do |booking| %>
+            <% unless policy(booking).user_is_creator? %>
+              <td class="card-title"><%= link_to booking.user.email, booking_path(booking), class: "text-dark" %></td>
+              <td class="card-title"><%= booking.start_date %></td>
+              <td class="card-title"><%= booking.end_date %></td>
+              <td class="card-title"><%= booking.van.user.full_name %></td>
+              <td class="card-title"><%= booking.approved %></td>
+            <% else %>
+              <td class="card-title text-dark"><%= link_to booking.van.title, van_path(booking.van), class: "text-dark" %></td>
+              <td class="card-title "><%= booking.start_date %></td>
+              <td class="card-title "><%= booking.end_date %></td>
+              <td class="card-title "><%= booking.van.user.full_name %></td>
+              <td class="card-title "><%= booking.approved %></td>
+            <% end %>
+    </tr>
   <% end %>
-</ol>
+
+  </tbody>
+</table>
+</div>
+</div>
