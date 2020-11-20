@@ -1,7 +1,15 @@
-<%= simple_form_for ([@van, @rating]) do |f| %>
-  <%= f.input :stars %>
-  <%= f.input :comment %>
-  <%= f.submit %>
-<% end %>
+<div class="container">
+  <div class="row justify-content-md-center">
+    <div class="col-sm-6" >
+    <h1>Let us know your opinion about this van</h1>
 
-<p><%= link_to "Go back", bookings_path, class: "btn btn-primary" %></p>
+    <%= simple_form_for ([@van, @rating]) do |f| %>
+      <%= f.input :stars, :collection => ["1", "2", "3", "4", "5"] %>
+      <%= f.input :comment %>
+      <%= f.submit %>
+    <% end %>
+
+    <p><%= link_to "Go back", bookings_path, class: "btn btn-primary" %></p>
+    </div>
+  </div>
+</div>
