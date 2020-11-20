@@ -1,34 +1,33 @@
-<div class="container-show">
+
+  <div class="row justify-content-md-center">
     <div class="col-sm-6">
+      <% if @van.photo.attached? %>
+      <%= cl_image_tag @van.photo.key, height: 300, width: 400, crop: :fill %>
+      <% end %>
 
-<h1><strong>title:</strong>  <%= @van.title %></h1>
-<h1><strong>price : $</strong> <%= @van.price %></h1>
-<h1><strong>description:</strong> <%= @van.description %></h1>
-<h1 id="address_auto"><strong>address:</strong> <%= @van.address %></h1>
-<% if @van.photo.attached? %>
-<%= cl_image_tag @van.photo.key, height: 300, width: 400, crop: :fill %>
-<% end %>
-<% if policy(@van).edit? %>
-  <%= link_to "Edit", edit_van_path, class: "btn btn-outline-success" %>
-<% end %>
+      <h2><strong>title:</strong>  <%= @van.title %></h2>
+      <h2><strong>price : $</strong> <%= @van.price %></h2>
+      <p><strong>description:</strong> <%= @van.description %></p>
+      <p><strong>address:</strong> <%= @van.address %></p>
+      <p>See all the previous ratings for this van:</p>
 
-<% if policy(@van).destroy? %>
-<%= link_to "Delete", van_path(@van), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-outline-success" %>
-<% end %>
+      <% @van.ratings.each do |rating| %>
+        <h2><%= rating.stars %></h2>
+        <h2><%= rating.comment %></h2>
+      <% end %>
+      <% if policy(@van).edit? %>
+        <%= link_to "Edit", edit_van_path, class: "btn btn-outline-success" %>
+      <% end %>
 
-<% unless policy(@van).destroy? %>
-<%= link_to "Book this van", new_van_booking_path(@van), data: { confirm: "Confirm the booking" }, class: "btn btn-outline-success" %>
-<% end %>
+      <% if policy(@van).destroy? %>
+      <%= link_to "Delete", van_path(@van), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-outline-success" %>
+      <% end %>
 
-<%= link_to "Back to see all vans ", vans_path, class: "btn btn-outline-primary"%>
+      <% unless policy(@van).destroy? %>
+      <%= link_to "Book this van", new_van_booking_path(@van), data: { confirm: "Confirm the booking" }, class: "btn btn-outline-success" %>
+      <% end %>
 
-</div>
-</div>
-
-<p>See all the previous ratings for this van:</p>
-
-<% @van.ratings.each do |rating| %>
-  <h2><%= rating.stars %></h2>
-  <h2><%= rating.comment %></h2>
-<% end %>
+      <%= link_to "Back to see all vans ", vans_path, class: "btn btn-outline-primary"%>
+    </div>
+  </div>
 
