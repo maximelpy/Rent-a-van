@@ -15,7 +15,7 @@
           <% end %>
           </h5>
           </div>
-          <h2 class="card-trip-pricing">$<%= van.price %></h2>
+          <h2 class="card-trip-pricing">$<%= van.price %> /per day</h2>
           <% if van.user.photo.attached? %>
             <%= cl_image_tag van.user.photo.key, height: 40, width: 40, crop: :fill, class: "card-trip-user avatar-bordered" %>
           <% else %>

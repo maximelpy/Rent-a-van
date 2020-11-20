@@ -3,7 +3,7 @@
     <div>
       <li>
         <% unless policy(booking).user_is_creator? %>
-          <p><%= link_to booking.user.email, booking_path(booking) %></p>
+          <p><%= link_to booking.user.full_name, booking_path(booking) %></p>
           <p>Total price :<%= (booking.end_date - booking.start_date).to_i * booking.van.price %>$</p>
           From <%= booking.start_date %> - To <%= booking.end_date %>
         <% else %>
