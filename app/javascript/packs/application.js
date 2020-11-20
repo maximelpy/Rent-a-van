@@ -36,4 +36,9 @@ document.addEventListener('turbolinks:load', () => {
 });
 
 
+const click_image_pop_up = document.querySelector(".mapboxgl-popup")
+  click_image_pop_up.addEventListener('click', (event) => {
+    console.log(yes);
+  });
+
 
