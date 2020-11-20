@@ -95,6 +95,14 @@ div.boolean, .simple_form input[type='submit'] {
 }
 
 
+div.boolean, .simple_form input[type='submit']:hover {
+  background-color: transparent;
+  color: #f05454;
+  text-decoration: none;
+  border: 1px solid #f05454;
+}
+
+
 
 
 
