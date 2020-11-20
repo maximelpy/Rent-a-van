@@ -33,12 +33,12 @@ import { initMapbox } from '../packs/init_mapbox';
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   initMapbox();
+  const click_image_pop_up = document.querySelector(".card-trip")
+    click_image_pop_up.addEventListener('click', (event) => {
+      event.currentTarget;
+    });
 });
 
 
-const click_image_pop_up = document.querySelector(".mapboxgl-popup")
-  click_image_pop_up.addEventListener('click', (event) => {
-    console.log(yes);
-  });
 
 
