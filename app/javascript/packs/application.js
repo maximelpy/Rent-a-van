@@ -33,11 +33,6 @@ import { initAutocomplete} from '../plugings/init_autocomplete';
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   initMapbox();
-
-  const click_image_pop_up = document.querySelector(".card-trip")
-    click_image_pop_up.addEventListener('click', (event) => {
-      event.currentTarget;
-  });
   initAutocomplete();
 });
 
