@@ -3,7 +3,7 @@
   <%= f.input :title %>
   <%= f.input :description %>
   <%= f.input :price %>
-  <%= f.input :address %>
+  <%= f.input :address, input_html: {id: 'edit_address' } %>
   <%= f.submit %>
 <% end %>
 
