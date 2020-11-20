@@ -1,4 +1,53 @@
 // Specific CSS for your home-page
 .btn {
- margin: 5px;
+  margin: 5px;
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-weight: 200;
+  font-style: bolder;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-weight: 200;
+  line-height: 1.4;
+  color: white;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 30;
+  overflow: hidden;
+  padding: 0 1rem;
+}
+
+.showcase {
+  background: rgba(222, 222, 222, 0.3);
+  color: #fff;
+  min-height: 100vh;
+  position: relative;
+  padding-top: 86px;
+}
+
+.showcase:before {
+  content: '';
+  background: url('https://images.pexels.com/photos/1287145/pexels-photo-1287145.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260') no-repeat center center/cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.row{
+  margin: 20px;
+  padding: 20px;
+  width:auto;
 }
