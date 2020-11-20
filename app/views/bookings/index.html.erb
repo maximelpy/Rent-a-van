@@ -2,6 +2,7 @@
   <% @bookings.each do |booking| %>
     <div>
       <li>
+        <h1>Price total :<%= (booking.end_date - booking.start_date) * booking.van.price %>$</h1>
         <% unless policy(booking).user_is_creator? %>
           <p><%= link_to booking.user.email, booking_path(booking) %></p>
           From <%= booking.start_date %> - To <%= booking.end_date %>
