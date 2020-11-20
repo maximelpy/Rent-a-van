@@ -28,11 +28,12 @@ import "bootstrap";
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
 import { initMapbox } from '../packs/init_mapbox';
-
+import { initAutocomplete} from '../plugings/init_autocomplete';
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   initMapbox();
+  initAutocomplete();
 });
 
 
