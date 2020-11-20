@@ -1,7 +1,7 @@
-<%= simple_form_for(@rating) do |f| %>
+<%= simple_form_for ([@van, @rating]) do |f| %>
   <%= f.input :stars %>
   <%= f.input :comment %>
   <%= f.submit %>
 <% end %>
 
-<p><%= link_to "Go back", ratings_path, class: "btn btn-primary" %></p>
+<p><%= link_to "Go back", bookings_path, class: "btn btn-primary" %></p>
