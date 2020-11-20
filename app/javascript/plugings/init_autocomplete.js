@@ -1,4 +1,4 @@
-import places from 'places.js';
+var places = require('places.js');
 
 const initAutocomplete = () => {
   const addressInput = document.getElementById('edit_address');
