@@ -1,12 +1,56 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: white;
+  background: transparent;
+  width: 100%;
+  z-index: 1;
+  position: absolute;
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-weight: 100;
 }
 
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-weight: 100;
+}
+
+a.dropdown-item {
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-weight: 100;
 }
 
 .navbar-lewagon .navbar-brand img {
-  width: 40px;
+  width: 50px;
+}
+
+.navbar-lewagon a {
+  text-decoration: none;
+  color: rgba(0,0,0,0.8);
+}
+
+.navbar-lewagon h1 {
+  text-decoration: none;
+  color: black;
+  font-family: 'Major Mono Display', monospace;
+}
+.navbar-lewagon a.btn {
+  text-decoration: none;
+  color: white;
+  font-style: bolder;
+  font-family: 'Montserrat Alternates', sans-serif;
+
+}
+
+.btn {
+  background-color: #f05454;
+  border: 1px solid #f05454;
+  color: white;
+}
+
+
+a.btn:hover {
+  background-color: transparent;
+  color: #f05454;
+  text-decoration: none;
+  border: 1px solid #f05454;
 }
