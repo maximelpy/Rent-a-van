@@ -1,7 +1,10 @@
 <%= link_to van_path(van), class: "background-image-van" do %>
 
+  <% if van.photo.attached? %>
   <div style="background-image: url(http://res.cloudinary.com/maximelpy/image/upload/h_150,w_240,c_fill/<%= van.photo.key %>)">
-
+  <% else %>
+  <div style="background-image: url(http://res.cloudinary.com/maximelpy/image/upload/c_fill,h_300,w_400/r94mbq1nvzfpdjae4bp72hs6vtn9)">
+  <% end %>
     <h2><%= van.title %></h2>
     <p><%= van.address %></p>
     <p><%= van.price %>$/per day</p>
