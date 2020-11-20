@@ -2,12 +2,12 @@
   overflow: hidden;
   background: rgba(0,0,0,0.8);
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  margin: 5px;
+  margin: 15px;
   height: auto;
 }
 
 .card-trip > img {
-  height: 100px;
+  height: 150px;
   width: 100%;
   object-fit: cover;
 }
@@ -102,6 +102,9 @@ div.boolean, .simple_form input[type='submit']:hover {
   border: 1px solid #f05454;
 }
 
+.fas {
+  color: #f05454;
+}
 
 
 

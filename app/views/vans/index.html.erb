@@ -10,12 +10,12 @@
           <div>
           <h2><%= link_to van.title, van_path(van) %></h2>
           <p><%= van.description %></p>
-          <h5>Average stars: <% van.average_stars.to_i.times do %>
+          <h5>Average stars: <%= van.average_stars %> <% van.average_stars.to_f.round.times do %>
             <i class="fas fa-star"></i>
           <% end %>
           </h5>
           </div>
-          <h2 class="card-trip-pricing">$<%= van.price %></h2>
+          <h2 class="card-trip-pricing">$<%= van.price %> /per day</h2>
           <% if van.user.photo.attached? %>
             <%= cl_image_tag van.user.photo.key, height: 40, width: 40, crop: :fill, class: "card-trip-user avatar-bordered" %>
           <% else %>
