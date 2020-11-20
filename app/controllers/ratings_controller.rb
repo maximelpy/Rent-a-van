@@ -19,10 +19,9 @@ class RatingsController < ApplicationController
     @van = Van.find(params[:van_id])
     @rating = Rating.new(rating_params)
     @rating.van = @van
-    @rating.user = current_user
     authorize(@rating)
     if @rating.save
-      redirect_to van_path(@van)
+      redirect_to bookings_path
     else
       render :new
     end
