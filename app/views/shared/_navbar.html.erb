@@ -2,7 +2,7 @@
   <%= link_to "#", class: "navbar-brand" do %>
     <%= image_tag "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Volkswagen_Van_Flat_Icon_Vector.svg/1024px-Volkswagen_Van_Flat_Icon_Vector.svg.png" %>
   <% end %>
-<h1> <%= link_to "RENT A VAN", vans_path %></h1>
+<h1> <%= link_to "Your Journey Starts Now", vans_path %></h1>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -11,7 +11,7 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
-        <%= link_to "Create a new van", new_van_path, class: "btn btn-outline-success" %>
+        <%= link_to "Create a new van", new_van_path, class: "btn" %>
         <li class="nav-item active">
         </li>
         <li class="nav-item dropdown">

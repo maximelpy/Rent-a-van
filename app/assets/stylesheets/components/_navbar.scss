@@ -4,6 +4,8 @@
   width: 100%;
   z-index: 1;
   position: absolute;
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-weight: 100;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -11,5 +13,25 @@
 }
 
 .navbar-lewagon .navbar-brand img {
-  width: 40px;
+  width: 50px;
+}
+
+.navbar-lewagon a {
+  text-decoration: none;
+  color: black;
+  font-style: bold;
+
+}
+
+.navbar-lewagon a.btn {
+  text-decoration: none;
+  color: white;
+  font-style: bolder;
+
+}
+
+.btn {
+  background-color: #f05454;
+  border: 1px solid #f05454;
+  color: white;
 }

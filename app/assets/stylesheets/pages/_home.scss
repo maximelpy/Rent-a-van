@@ -1,6 +1,9 @@
 // Specific CSS for your home-page
 .btn {
- margin: 5px;
+  margin: 5px;
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-weight: 200;
+  font-style: bolder;
 }
 
 
@@ -11,15 +14,17 @@
 }
 
 body {
-  font-family: 'montserrat';
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-weight: 200;
   line-height: 1.4;
+  color: white;
 }
 
 .container {
-  max-width: 960px;
-  margin: auto;
+  max-width: 1200px;
+  margin: 30;
   overflow: hidden;
-  padding: 0 3rem;
+  padding: 0 1rem;
 }
 
 .showcase {
@@ -44,4 +49,5 @@ body {
 .row{
   margin: 20px;
   padding: 20px;
+  width:auto;
 }
