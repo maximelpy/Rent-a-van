@@ -15,15 +15,12 @@
           <% end %>
           </h5>
           </div>
-           <h2 class="card-trip-pricing">$<%= van.price %></h2>
-
-
-            <% if user_signed_in? && current_user.photo.attached? %>
-              <%= cl_image_tag current_user.photo.key, height: 40, width: 40, crop: :fill, class: "card-trip-user avatar-bordered" %>
-            <% else %>
-              <%= image_tag "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Volkswagen_Van_Flat_Icon_Vector.svg/1024px-Volkswagen_Van_Flat_Icon_Vector.svg.png" %>
-
-            <% end %>
+          <h2 class="card-trip-pricing">$<%= van.price %></h2>
+          <% if van.user.photo.attached? %>
+            <%= cl_image_tag van.user.photo.key, height: 40, width: 40, crop: :fill, class: "card-trip-user avatar-bordered" %>
+          <% else %>
+            <img src="https://icons-for-free.com/iconfiles/png/512/person+profile+user+icon-1320184018411209468.png" class="card-trip-user avatar-bordered" />
+          <% end %>
           </div>
         </div>
       <% end %>

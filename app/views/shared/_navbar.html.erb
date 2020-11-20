@@ -15,7 +15,7 @@
         <li class="nav-item active">
         </li>
         <li class="nav-item dropdown">
-          <% if current_user.photo.attached? %>
+          <% if user_signed_in? && current_user.photo.attached? %>
             <%= cl_image_tag current_user.photo.key, height: 40, width: 40, crop: :fill, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
           <% else %>
             <%= image_tag "https://icons-for-free.com/iconfiles/png/512/person+profile+user+icon-1320184018411209468.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
