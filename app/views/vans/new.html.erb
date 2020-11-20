@@ -10,7 +10,9 @@
   <%= f.input :price %>
   <%= f.input :address %>
   <%= f.submit%> <%= link_to "Go back", vans_path, class: "btn btn-primary" %>
-<% end %>
+  <%= f.input :address, input_html: {id: 'edit_address' } %>
+  <%= f.submit %>
+  <% end %>
 </div>
 </div>
 </div>
