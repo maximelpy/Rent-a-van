@@ -6,7 +6,6 @@ class VansController < ApplicationController
 
     @vans = policy_scope(Van).order(:created_at)
     @vans = Van.geocoded
-
     @markers = @vans.geocoded.map do |van|
       {
         lat: van.latitude,
