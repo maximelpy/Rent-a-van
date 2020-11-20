@@ -4,7 +4,7 @@
 <h1><strong>title:</strong>  <%= @van.title %></h1>
 <h1><strong>price : $</strong> <%= @van.price %></h1>
 <h1><strong>description:</strong> <%= @van.description %></h1>
-<h1><strong>address:</strong> <%= @van.address %></h1>
+<h1 id="address_auto"><strong>address:</strong> <%= @van.address %></h1>
 <% if @van.photo.attached? %>
 <%= cl_image_tag @van.photo.key, height: 300, width: 400, crop: :fill %>
 <% end %>

@@ -15,7 +15,9 @@
           </div>
            <h2 class="card-trip-pricing">$<%= van.price %></h2>
             <% if current_user.photo.attached? %>
-            <%= cl_image_tag current_user.photo.key, height: 40, width: 40, crop: :fill, class: "card-trip-user avatar-bordered" %>
+              <%= cl_image_tag current_user.photo.key, height: 40, width: 40, crop: :fill, class: "card-trip-user avatar-bordered" %>
+            <% else %>
+              <img src="https://icons-for-free.com/iconfiles/png/512/person+profile+user+icon-1320184018411209468.png" class="card-trip-user avatar-bordered" />
             <% end %>
           </div>
         </div>
