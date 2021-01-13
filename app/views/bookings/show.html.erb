@@ -1,18 +1,15 @@
-<div class="container-show">
-    <div class="col-sm-6">
-
-  <% current_user %>
-  <h1>Name : <%= @booking.user.full_name %></h1>
-  <h2>price : <%= @booking.van.price %> $/per day</h2>
-  <h2>Van : <%= @booking.van.title %></h2>
-  <h2>from : <%= @booking.start_date %></h2>
-  <h2>to : <%= @booking.end_date %></h2>
-
-  <p><%= link_to "Reject", booking_path(@booking, {booking: {approved: "rejected"}}), method: :patch, data: { confirm: "Are you sure to reject the offer?" }, class: "btn btn-outline-success" %></p>
-  <p><%= link_to "Accept", booking_path(@booking, {booking: {approved: "approved"}}), method: :patch, data: { confirm: "Are you sure to accept the offer ?" }, class: "btn btn-outline-success" %></p>
-
-
-  <p><%= link_to "Back to see all vans", vans_path, class: "btn btn-outline-primary"%></p>
+<div class="container">
+    <div class="row justify-content-md-center">
+        <div class="col-sm-6">
+            <% current_user %>
+            <h1>Name : <%= @booking.user.full_name %></h1>
+            <h2>price : <%= @booking.van.price %> $/per day</h2>
+            <h2>Van : <%= @booking.van.title %></h2>
+            <h2>from : <%= @booking.start_date %></h2>
+            <h2>to : <%= @booking.end_date %></h2>
+            <p><%= link_to "Reject", booking_path(@booking, {booking: {approved: "rejected"}}), method: :patch, data: { confirm: "Are you sure to reject the offer?" }, class: "btn btn-outline-success" %></p>
+            <p><%= link_to "Accept", booking_path(@booking, {booking: {approved: "approved"}}), method: :patch, data: { confirm: "Are you sure to accept the offer ?" }, class: "btn btn-outline-success" %></p>
+            <p><%= link_to "Back to see all vans", vans_path, class: "btn btn-outline-primary"%></p>
+        </div>
+    </div>
 </div>
-</div>
-
